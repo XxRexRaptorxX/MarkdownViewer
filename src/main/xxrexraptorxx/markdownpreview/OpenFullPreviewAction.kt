@@ -22,7 +22,7 @@ val project = e.project ?: return
 val editor = e.getData(com.intellij.openapi.actionSystem.CommonDataKeys.EDITOR)
 val vf = e.getData(com.intellij.openapi.actionSystem.CommonDataKeys.VIRTUAL_FILE)
 if (vf == null) {
-Messages.showInfoMessage(project, "Bitte öffne zuerst eine Markdown-Datei.", "Kein File")
+Messages.showInfoMessage(project, "Please open a markdown file first", "No file")
 return
 }
 

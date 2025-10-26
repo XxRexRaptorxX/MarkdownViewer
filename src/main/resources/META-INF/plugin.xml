@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<idea-plugin>
+    <id>xxrexraptorxx.markdownfullpreview</id>
+    <name>Markdown Full Preview (Split)</name>
+    <version>0.1.0</version>
+    <vendor email="raptor-simon@web.de" url="https://github.com/XxRexRaptorxX">You</vendor>
+
+
+    <description>
+        Adds an action "Open Full Preview (Split) which opens a live rendered preview of the current Markdown file in a separate editor tab (preview closes independently) while keeping the editor open."
+    </description>
+
+
+    <depends>com.intellij.modules.platform</depends>
+
+
+    <extensions defaultExtensionNs="com.intellij">
+        <fileEditorProvider implementation="xxrexraptorxx.markdownpreview.PreviewFileEditorProvider"/>
+    </extensions>
+
+
+    <actions>
+        <group id="MarkdownPreviewGroup" text="Markdown Preview" description="Markdown Preview actions"/>
+        <action id="Markdown.OpenFullPreview" class="xxrexraptorxx.markdownpreview.OpenFullPreviewAction" text="Open Full Preview (Split)" description="Open a full preview in a new editor tab (keeps original editor open)">
+            <add-to-group group-id="MarkdownPreviewGroup" anchor="last" />
+        </action>
+    </actions>
+</idea-plugin>
